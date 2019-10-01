@@ -5,9 +5,9 @@ $(document).ready(function(){
 //`\b(\w*Thursday\w*)\b`
 //`\b(\w*Saturday\w*)\b`
 
-// Hourly rate for Tuesdays and Thursdays
+// Hours for Tuesdays and Thursdays
 let tuesAndThurs = 4.25;
-// Hourly rate for Saturdays
+// Hours for Saturdays
 let saturdays = 4.75;
 // Total number of week days including Tuesdays and Thursdays
 // let numWeekDays = 15;
