@@ -8,9 +8,9 @@ let tuesAndThurs = 4.25;
 // Hourly rate for Saturdays
 let saturdays = 4.75;
 // Total number of week days including Tuesdays and Thursdays
-let numWeekDays = 14;
+let numWeekDays = 15;
 // Total number of Saturdays
-let numSaturdays = 6;
+let numSaturdays = 7;
 // Hourly rate
 let perHour = 20;
 // Factoring in any missed class hours
@@ -19,11 +19,11 @@ let missedClassHours = 8.5;
     function workOutHours () {
         // Total week hours multiplied by number of week days
         let totalWeekHours = tuesAndThurs * numWeekDays;
-        console.log("Total hours worked on weekdays: " + totalWeekHours + " hours");
+        // console.log("Total hours worked on weekdays: " + totalWeekHours + " hours");
         // Total Saturday hours multiplied by number of Saturdays
         let totalSatHours = saturdays * numSaturdays;
-        console.log("Total hours worked on Saturdays: " + totalSatHours + " hours");
-        // Work out total hours worked by combining weekdays with Saturdays hours
+        // console.log("Total hours worked on Saturdays: " + totalSatHours + " hours");
+        // Work out total hours worked by combining weekdays with Saturdays hours and subtracting any missed hours
         let totalHoursWorked = totalWeekHours + totalSatHours - missedClassHours;
         console.log("Total hours including missed hours: " + totalHoursWorked + " hours");
         // Work out the total gross pay including any missed classes
