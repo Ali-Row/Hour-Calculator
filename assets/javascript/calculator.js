@@ -12,7 +12,7 @@ let numSaturdays = 0;
 let perHour = 20;
 // Factoring in any missed class hours
 let missedClassHours = 8.5;
-
+// Set the launchModal id to a variable and hide the button
 let openModal = $('#launchModal').hide();
 
     // When the submit button is clicked run this function
