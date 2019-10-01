@@ -1,31 +1,27 @@
 $(document).ready(function(){
 
-// regex used for days
-//`\b(\w*Tuesday\w*)\b`
-//`\b(\w*Thursday\w*)\b`
-//`\b(\w*Saturday\w*)\b`
-
 // Hours for Tuesdays and Thursdays
 let tuesAndThurs = 4.25;
 // Hours for Saturdays
 let saturdays = 4.75;
 // Total number of week days including Tuesdays and Thursdays
-// let numWeekDays = 15;
 let numWeekDays = 0;
 // Total number of Saturdays
-// let numSaturdays = 7;
 let numSaturdays = 0;
 // Hourly rate
 let perHour = 20;
 // Factoring in any missed class hours
 let missedClassHours = 8.5;
 
+let openModal = $('#launchModal').hide();
+
+    // When the submit button is clicked run this function
     $('#submit').on('click', function () {
         event.preventDefault();
         numWeekDays = $('#weekdays').val().trim();
         numSaturdays = $('#saturdays').val().trim();
         missedClassHours = $('#missedHours').val().trim();
-        // Running the function and passing in all of the variables
+        // Running the workOutHours function and passing in all of the variables
         workOutHours(tuesAndThurs, saturdays, numWeekDays, numSaturdays, perHour, missedClassHours);
     });
 
@@ -36,16 +32,18 @@ let missedClassHours = 8.5;
         let totalSatHours = saturdays * numSaturdays;
         // Work out total hours worked by combining weekdays with Saturdays hours and subtracting any missed hours
         let totalHoursWorked = totalWeekHours + totalSatHours - missedClassHours;
-        $("#displayHours").html("<h5> Total hours including missed hours: " + "<h3>" + totalHoursWorked + " hours");
         // Work out the total gross pay including any missed classes
         let totalAmountPaid = totalHoursWorked * perHour;
 
-        if (numWeekDays === "" || numSaturdays === "" || missedClassHours === "") {
-            alert("Please fill out all of the fields!")
-        } else {
-            $("#displayPay").html("<h5> Gross pay for every class worked to date: " + "<h3>" + "$" + totalAmountPaid + ".00");
+        // Ternary conditional to determin whether or not the fields have been filled out
+        numWeekDays === "" || numSaturdays === "" || missedClassHours === "" ? fillOutFields() : renderResults();
 
-                $("#main").html(`<hr class="my-4">
+        function fillOutFields () {
+            openModal.click();
+        }
+
+        function renderResults () {
+            $('#main').html(`<hr class="my-4">
                 <div class="p-2">
                     <h5>Total hours including missed hours:<h3>${totalHoursWorked}</h3></h5>
                 </div>
