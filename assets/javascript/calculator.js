@@ -22,8 +22,9 @@ let missedClassHours = 8.5;
 
     $('#submit').on('click', function () {
         event.preventDefault();
-        numWeekDays = $('#weekdays').val();
-        numSaturdays = $('#saturdays').val();
+        numWeekDays = $('#weekdays').val().trim();
+        numSaturdays = $('#saturdays').val().trim();
+        missedClassHours = $('#missedHours').val().trim();
         // Running the function and passing in all of the variables
         workOutHours(tuesAndThurs, saturdays, numWeekDays, numSaturdays, perHour, missedClassHours);
     });
@@ -37,34 +38,29 @@ let missedClassHours = 8.5;
         let totalHoursWorked = totalWeekHours + totalSatHours - missedClassHours;
         $("#displayHours").html("<h5> Total hours including missed hours: " + "<h3>" + totalHoursWorked + " hours");
         // Work out the total gross pay including any missed classes
-
         let totalAmountPaid = totalHoursWorked * perHour;
-        $("#displayPay").html("<h5> Gross pay for every class worked to date: " + "<h3>" + "$" + totalAmountPaid + ".00");
 
-            $("#main").html(`<hr class="my-4">
+        if (numWeekDays === "" || numSaturdays === "" || missedClassHours === "") {
+            alert("Please fill out all of the fields!")
+        } else {
+            $("#displayPay").html("<h5> Gross pay for every class worked to date: " + "<h3>" + "$" + totalAmountPaid + ".00");
 
-            <div class="p-2">
-                <h5>Total hours including missed hours:<h3>${totalHoursWorked}</h3></h5>
-            </div>
-
-                <hr class="my-4">
-            
-            <div class="p-2">
-                <h5>Hourly rate:<h3>$${perHour}.00</h3></h5>
-            </div>
-            
-                <hr class="my-4">
-            
-            <div class="p-2">
-                <h5>Gross pay for every class worked to date:<h3>$${totalAmountPaid}.00</h3></h5>
-            </div>
-
-                <hr class="my-4">
-
-            <div class="p-2">
-            <h5>Total missed hours:<h3>${missedClassHours} hours</h3></h5>
-
-        </div>`)
+                $("#main").html(`<hr class="my-4">
+                <div class="p-2">
+                    <h5>Total hours including missed hours:<h3>${totalHoursWorked}</h3></h5>
+                </div>
+                    <hr class="my-4">
+                <div class="p-2">
+                    <h5>Hourly rate:<h3>$${perHour}.00</h3></h5>
+                </div>
+                    <hr class="my-4">
+                <div class="p-2">
+                    <h5>Gross pay for every class worked to date:<h3>$${totalAmountPaid}.00</h3></h5>
+                </div>
+                    <hr class="my-4">
+                <div class="p-2">
+                    <h5>Total missed hours:<h3>${missedClassHours}</h3></h5>
+            </div>`)
+        }
     }
-
 });

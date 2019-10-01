@@ -7,31 +7,43 @@
     <title>Hour Calculator</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <div class="jumbotron">
-        <h1 class="display-4">Hour Calculator</h1>
-        <hr class="my-4">
+    <div class="container">
+        <div class="jumbotron">
 
-        <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Enter weekdays worked</label>
-            <input type="text" id="weekdays" class="form-control rounded-pill" placeholder="eg. 10">
+            <img src="assets/images/trilogy-logo.png" class="mx-auto" alt="Trilogy">
+
+            <h1 class="display-4 text-center">Coding Bootcamp Hour Calculator</h1>
+            <hr class="my-4">
+
+            <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter weekdays worked</label>
+                <input type="text" id="weekdays" class="form-control rounded-pill" placeholder="eg. 10">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter Saturdays worked</label>
+                <input type="text" id="saturdays" class="form-control rounded-pill" placeholder="eg. 5">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter any missed class hours (if any)</label>
+                <input type="text" id="missedHours" class="form-control rounded-pill" placeholder="eg. 9">
+            </div>
+
+            <button id="submit" type="submit" class="btn btn-primary rounded-pill">Submit</button>
+            </form>
+
+            <div id="main"></div>
+
+            <hr class="my-4">
+            <p class="text-center">© Copyright <a href="https://github.com/Ali-Row">Alistair Rowden</a> 2019</p>
         </div>
-
-        <div class="form-group">
-            <label for="exampleInputEmail1">Enter Saturdays worked</label>
-            <input type="text" id="saturdays" class="form-control rounded-pill" placeholder="eg. 5">
-        </div>
-        <button id="submit" type="submit" class="btn btn-primary rounded-pill">Submit</button>
-        </form>
-
-        <div id="main"></div>
-
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

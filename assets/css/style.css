@@ -1,0 +1,28 @@
+body {
+    background: rgb(58, 63, 73);
+}
+
+img {
+    max-width: 300px;
+    display: block;
+}
+
+button {
+    background: #14C6E6 !important;
+    border: #14C6E6 !important;
+}
+
+button:hover {
+    background: #2E91A3 !important;
+    border: #2E91A3 !important;
+}
+
+a {
+    text-decoration: none!important;
+    color: #2E91A3;
+}
+
+a:hover {
+    text-decoration: none!important;
+    color: rgb(28, 94, 105);
+}
