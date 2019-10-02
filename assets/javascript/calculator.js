@@ -44,19 +44,19 @@ let openModal = $('#launchModal').hide();
 
         function renderResults () {
             $('#main').html(`<hr class="my-4">
-                <div class="p-2">
+                <div class="p-2 animated fadeInDown">
                     <h5>Total hours including missed hours:<h3>${totalHoursWorked}</h3></h5>
                 </div>
                     <hr class="my-4">
-                <div class="p-2">
+                <div class="p-2 animated fadeInDown">
                     <h5>Hourly rate:<h3>$${perHour}.00</h3></h5>
                 </div>
                     <hr class="my-4">
-                <div class="p-2">
+                <div class="p-2 animated fadeInDown">
                     <h5>Gross pay for every class worked to date:<h3>$${totalAmountPaid}.00</h3></h5>
                 </div>
                     <hr class="my-4">
-                <div class="p-2">
+                <div class="p-2 animated fadeInDown">
                     <h5>Total missed hours:<h3>${missedClassHours}</h3></h5>
             </div>`)
         }

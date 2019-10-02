@@ -8,6 +8,7 @@
     <title>Coding Bootcamp Hour Calculator</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -21,22 +22,22 @@
             <hr class="my-4">
 
             <form>
-            <div class="form-group">
+            <div class="form-group animated flipInX">
                 <label for="exampleInputEmail1">Enter weekdays worked</label>
                 <input type="text" id="weekdays" class="form-control rounded-pill" placeholder="eg. 10">
             </div>
 
-            <div class="form-group">
+            <div class="form-group animated flipInX">
                 <label for="exampleInputEmail1">Enter Saturdays worked</label>
                 <input type="text" id="saturdays" class="form-control rounded-pill" placeholder="eg. 5">
             </div>
 
-            <div class="form-group">
+            <div class="form-group animated flipInX">
                 <label for="exampleInputEmail1">Enter any missed class hours (if any)</label>
                 <input type="text" id="missedHours" class="form-control rounded-pill" placeholder="eg. 9">
             </div>
 
-            <button id="submit" type="submit" class="btn btn-primary rounded-pill">Submit</button>
+            <button id="submit" type="submit" class="btn btn-primary rounded-pill animated flipInX">Submit</button>
             </form>
 
             <div id="main"></div>
@@ -46,7 +47,7 @@
             </button>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade animated bounce" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
