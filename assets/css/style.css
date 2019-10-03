@@ -5,6 +5,10 @@ img {
     max-width: 300px;
     display: block;
 }
+.jumbotron {
+    background: rgb(217,216,220);
+    background: linear-gradient(144deg, rgb(232, 231, 233) 0%, rgb(204, 207, 211) 100%);
+}
 #launchModal {
     background: none;
     border: none;
