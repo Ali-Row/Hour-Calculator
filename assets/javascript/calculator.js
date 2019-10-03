@@ -43,7 +43,8 @@ let openModal = $('#launchModal').hide();
         }
 
         function renderResults () {
-            $('#main').html(`<hr class="my-4">
+            $('#main').html(`
+                    <hr class="my-4">
                 <div class="p-2 animated fadeInDown">
                     <h5>Total hours including missed hours:<h3>${totalHoursWorked}</h3></h5>
                 </div>
