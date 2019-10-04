@@ -25,7 +25,7 @@ let openModal = $('#launchModal').hide();
         workOutHours(tuesAndThurs, saturdays, numWeekDays, numSaturdays, perHour, missedClassHours);
     });
 
-    function workOutHours () {
+     workOutHours = () => {
         // Total week hours multiplied by number of week days
         let totalWeekHours = tuesAndThurs * numWeekDays;
         // Total Saturday hours multiplied by number of Saturdays
