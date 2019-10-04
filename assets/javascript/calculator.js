@@ -36,7 +36,7 @@ let openModal = $('#launchModal').hide();
         let totalAmountPaid = totalHoursWorked * perHour;
 
         // Ternary conditional to determin whether or not the fields have been filled out
-        numWeekDays === "" || numSaturdays === "" || missedClassHours === "" ? fillOutFields() : renderResults();
+        !numWeekDays || !numSaturdays || !missedClassHours ? fillOutFields() : renderResults();
 
         function fillOutFields () {
             openModal.click();
